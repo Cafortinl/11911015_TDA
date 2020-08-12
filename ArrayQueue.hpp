@@ -14,7 +14,7 @@ class ArrayQueue : public TDAQueue{
         bool isEmpty();
         void print();
         int calcLength();
-    protected:
+    private:
         Object** array;
         int capacity;
         int front, end;

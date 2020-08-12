@@ -13,7 +13,7 @@ class Node{
         void setData(Object*);
         Object* getData();
         ~Node();
-    protected:
+    private:
         Node* next;
         Node* previous;
         Object* data;

@@ -20,7 +20,7 @@ class ArrayList : public TDAList{
         Object* first();
         int find(Object*);
         int size();
-    protected:
+    private:
         Object** array;
         int capacity;
         int n;

@@ -14,7 +14,7 @@ class ArrayStack : public TDAStack{
         bool isEmpty();
         void print();
         void clear();
-    protected:
+    private:
         Object** array;
         int tope;
         int capacity;

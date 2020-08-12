@@ -17,6 +17,5 @@ class LinkedQueue : public TDAQueue{
     private:
         Node* front;
         Node* end;
-        int n;
 };
 #endif

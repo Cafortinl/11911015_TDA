@@ -5,7 +5,6 @@ using namespace std;
 
 LinkedStack::LinkedStack(){
     topNode = nullptr;
-    n = 0;
 }
 
 LinkedStack::~LinkedStack(){
@@ -24,24 +23,23 @@ void LinkedStack::push(Object* x){
     nNode->setNext(temp);
     temp->setPrevious(nNode);
     topNode = nNode;
-    n++;
 }
 
 //Método que saca el elemento en el tope de la pila y retorna su valor, retorna nullptr en caso de que la pila esté vacía
 Object* LinkedStack::pop(){
     if(!isEmpty()){//Validando que la pila no esté vacía
         Node* temp = topNode;
-        temp->getNext()->setPrevious(temp->getPrevious());
-        topNode = temp->getNext();
+        if(temp->getNext()){
+            temp->getNext()->setPrevious(temp->getPrevious());
+            topNode = temp->getNext();
+        }
         temp->setNext(nullptr);
         temp->setPrevious(nullptr);
         Object* returnValue = temp->getData();
         temp->setData(nullptr);
         delete temp;
-        if(n - 1 == 0){//Validando si al sacar el elemento la pila queda vacía
+        if(!topNode->getNext())//Validando si al sacar el elemento la pila queda vacía
             clear();
-        }else
-            n--;
         return returnValue;
     }else
         return nullptr;
@@ -64,9 +62,11 @@ bool LinkedStack::isEmpty(){
 void LinkedStack::print(){
     if(!isEmpty()){
         Node* temp = topNode;
-        for(int i = 0;i < n;i++){
-            cout << to_string(i + 1) + '[' + temp->getData()->toString() + ']' << endl;
+        int i = 1;
+        while(temp->getNext()){
+            cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
             temp = temp->getNext();
+            i++;
         }
         temp = nullptr;
         delete temp;
@@ -79,7 +79,6 @@ void LinkedStack::clear(){
     if(!isEmpty()){
         delete topNode;
         topNode = nullptr;
-        n = 0;
     }else{
         cout << "La lista ya está vacía" << endl;
     }

@@ -6,7 +6,6 @@ using namespace std;
 LinkedQueue::LinkedQueue(){
     front = nullptr;
     end = nullptr;
-    n = 0;
 }
 
 LinkedQueue::~LinkedQueue(){
@@ -20,7 +19,6 @@ void LinkedQueue::clear(){
         delete front;
     front = nullptr;
     end = nullptr;
-    n = 0;
 }
 
 //Método que retorna el elemento que sigue en la cola sin quitarlo de la cola. Si la cola está vacía retorna nullptr
@@ -34,10 +32,10 @@ Object* LinkedQueue::peek(){
 //Método que pone en cola el elemento x
 void LinkedQueue::queue(Object* x){
     if(isEmpty()){//Validando el caso en el que la lista esté vacía
-        front = new Node;
+        Node* nNode = new Node;
+        nNode->setData(x);
+        front = nNode;
         end = front;
-        front->setData(x);
-        n++;
     }else{
         Node* temp = end;
         Node* nNode = new Node;
@@ -45,7 +43,6 @@ void LinkedQueue::queue(Object* x){
         nNode->setPrevious(temp);
         temp->setNext(nNode);
         end = nNode;
-        n++;
     }
 }
 
@@ -60,12 +57,10 @@ Object* LinkedQueue::dequeue(){
         }
         temp->setNext(nullptr);
         temp->setData(nullptr);
-        if(n - 1 == 0)//Validando en caso que la cola quede vacía
+        if(temp == front)//Validando en caso que la cola quede vacía
             clear();
-        else{
+        else
             delete temp;
-            n--;
-        }
         return returnValue;
     }else
         return nullptr;
@@ -80,10 +75,13 @@ bool LinkedQueue::isEmpty(){
 void LinkedQueue::print(){
     if(!isEmpty()){
         Node* temp = front;
-        for(int i = 0;i < n;i++){
-            cout << to_string(i + 1) + '[' + temp->getData()->toString() + ']' << endl;
+        int i = 1;
+        while(temp->getNext()){
+            cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
             temp = temp->getNext();
+            i++;
         }
+        cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
         temp = nullptr;
         delete temp;
     }else

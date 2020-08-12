@@ -16,6 +16,5 @@ class LinkedStack : public TDAStack{
         void clear();
     private:
         Node* topNode;
-        int n;
 };
 #endif

@@ -51,6 +51,8 @@ Object* LinkedList::remove(int p){
             temp->getPrevious()->setNext(temp->getNext());
         if(temp->getNext())//Validando si temp tiene un nodo siguiente
             temp->getNext()->setPrevious(temp->getPrevious());
+        if(temp == start)
+            start = temp->getNext();
         temp->setNext(nullptr);
         temp->setPrevious(nullptr);
         Object* returnValue = temp->getData();

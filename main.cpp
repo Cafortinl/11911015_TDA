@@ -11,6 +11,7 @@
 #include "ArrayQueue.hpp"
 #include "Node.hpp"
 #include "LinkedList.hpp"
+#include "LinkedStack.hpp"
 
 using namespace std;
 
@@ -229,6 +230,8 @@ int stackOptions(int x){
         }
 
         case 2:{
+            pila = new LinkedStack;
+            opcionValida = true;
             break;
         }
 

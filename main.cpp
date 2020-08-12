@@ -12,6 +12,7 @@
 #include "Node.hpp"
 #include "LinkedList.hpp"
 #include "LinkedStack.hpp"
+#include "LinkedQueue.hpp"
 
 using namespace std;
 
@@ -317,6 +318,8 @@ int queueOptions(int x){
         }
 
         case 2:{
+            cola = new LinkedQueue;
+            opcionValida = true;
             break;
         }
 

@@ -12,6 +12,7 @@ all:
 	Node.cpp \
 	LinkedList.cpp \
 	LinkedStack.cpp \
+	LinkedQueue.cpp \
 	-o tda
 clean:
 	-rm o

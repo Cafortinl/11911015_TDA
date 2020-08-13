@@ -93,6 +93,10 @@ int listOptions(int x){
             break;
         }
 
+        case 3:{
+            break;
+        }
+
         default:{
             cout << "La opción ingresada no es válida" << endl;
             break;
@@ -102,6 +106,7 @@ int listOptions(int x){
         do{
             showOperations(1);
             opcion = validInput();
+            cout << endl;
             switch(opcion){
                 case 1:{
                     int posicion;
@@ -127,9 +132,7 @@ int listOptions(int x){
                 }
 
                 case 2:{
-                    cout << endl;
                     lista->print();
-                    cout << endl;
                     break;
                 }
 
@@ -212,6 +215,7 @@ int listOptions(int x){
                     cout << "La opción ingresada no es válida" << endl;
                 }
             }
+            cout << endl;
         }while(opcion != 10);
         delete lista;
     }
@@ -236,6 +240,10 @@ int stackOptions(int x){
             break;
         }
 
+        case 3:{
+            break;
+        }
+
         default:{
             cout << "La opción ingresada no es válida" << endl;
             break;
@@ -245,6 +253,7 @@ int stackOptions(int x){
         do{
             showOperations(2);
             opcion = validInput();
+            cout << endl;
             switch(opcion){
                 case 1:{
                     cin.ignore();
@@ -285,9 +294,7 @@ int stackOptions(int x){
                 }
 
                 case 5:{
-                    cout << endl;
                     pila->print();
-                    cout << endl;
                     break;
                 }
 
@@ -299,6 +306,7 @@ int stackOptions(int x){
                     cout << "La opción ingresada no es válida" << endl;
                 }
             }
+            cout << endl;
         }while(opcion != 6);
         delete pila;
     }
@@ -323,6 +331,10 @@ int queueOptions(int x){
             break;
         }
 
+        case 3:{
+            break;
+        }
+
         default:{
             cout << "La opción ingresada no es válida" << endl;
             break;
@@ -332,6 +344,7 @@ int queueOptions(int x){
         do{
             showOperations(3);
             opcion = validInput();
+            cout << endl;
             switch(opcion){
                 case 1:{
                     string nombre, cuenta;
@@ -373,9 +386,7 @@ int queueOptions(int x){
                 }
 
                 case 5:{
-                    cout << endl;
                     cola->print();
-                    cout << endl;
                     break;
                 }
 
@@ -387,6 +398,7 @@ int queueOptions(int x){
                     cout << "La opción ingresada no es válida" << endl;
                 }
             }
+            cout << endl;
         }while(opcion != 6);
         delete cola;
     }
@@ -402,6 +414,7 @@ void menuOptions(int x){
             do{
                 showMenu(2);
                 opcion = validInput();
+                cout << endl;
                 opcion = listOptions(opcion);
             }while(opcion != 3);
             break;
@@ -411,6 +424,7 @@ void menuOptions(int x){
             do{
                 showMenu(3);
                 opcion = validInput();
+                cout << endl;
                 opcion = stackOptions(opcion);
             }while(opcion != 3);
             break;
@@ -420,6 +434,7 @@ void menuOptions(int x){
             do{
                 showMenu(4);
                 opcion = validInput();
+                cout << endl;
                 opcion = queueOptions(opcion);
             }while(opcion != 3);
             break;
@@ -441,6 +456,7 @@ int main(){
     do{
         showMenu(1);
         opcion = validInput();
+        cout << endl;
         menuOptions(opcion);
     }while(opcion != 4);
     cout << "Fin del programa" << endl;

@@ -10,12 +10,12 @@
     - Pila
     - Cola
 3. Menú principal
-4. Menú TDA lista
-    - Opciones de la lista
-5. Menú TDA pila
-    - Opciones de la pila
-6. Menú TDA cola
-    - Opciones de la cola
+    - Menú TDA lista
+        - Opciones de la lista
+    - Menú TDA pila
+        - Opciones de la pila
+    - Menú TDA cola
+        - Opciones de la cola
 
 # Introducción
 Este proyecto fue desarrollado para poder trabajar con los tipos de datos abstractos
@@ -35,3 +35,12 @@ siguen la regla de LIFO (last in, first out) o último en entrar, primero en sal
 ## Cola
 La cola es un tipo especial de la lista en la que las inserciones y supreciones siguien
 la regla FIFO (first in, first out) o primero en entrar, primero en salir.
+
+# Menú Principal
+
+![Menú Principal](./images/menuPrincipal.png)
+
+## Opción 1: Trabajar con listas
+Al seleccionar la primera opción el programa nos mostrará el menú de listas
+
+![Menú Lista](./images/menuLista.png)

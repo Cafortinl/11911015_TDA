@@ -39,6 +39,7 @@ la regla FIFO (first in, first out) o primero en entrar, primero en salir.
 # Menú Principal
 
 ![Menú Principal](./images/menuPrincipal.png)
+
 Menú Principal
 
 ## Opción 1: Trabajar con listas

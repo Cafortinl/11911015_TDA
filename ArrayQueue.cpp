@@ -7,7 +7,6 @@ ArrayQueue::ArrayQueue(){
     capacity = 1000;
     front = end = 0;
     array = new Object*[capacity];
-    cout<<"created"<<end;
 }
 
 ArrayQueue::~ArrayQueue(){
@@ -19,7 +18,6 @@ ArrayQueue::~ArrayQueue(){
             delete array[(i + front) - length];
     }
     delete[] array;
-    cout<<"deleted"<<endl;
 }
 
 //Método que vacía la cola

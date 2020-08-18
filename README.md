@@ -5,7 +5,7 @@
 ## Índice
 
 1. Introducción
-2. Compilación del proyecto
+2. Instalar y compilar
 3. TDA's
     - Lista
     - Pila
@@ -23,11 +23,11 @@ Este proyecto fue desarrollado para poder trabajar con los tipos de datos abstra
 lista, pila y cola. Usted podrá trabajar con los tres tipos de datos en dos tipos de
 implementaciones: con arreglos y con nodos doblemente enlazados.
 
-# Compilación del proyecto
+# Instalar y compilar
 
 ![Compilación](./images/compilar.gif)
 
-Para compilar el proyecto simplemente debe escribir en la terminal: 
+Para instalar y compilar el proyecto simplemente debe escribir en la terminal: 
 
 ```bash
 git clone https://github.com/Cafortinl/11911015_TDA

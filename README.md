@@ -30,6 +30,7 @@ implementaciones: con arreglos y con nodos doblemente enlazados.
 Para compilar el proyecto simplemente debe escribir en la terminal: 
 
 ```bash
+git clone https://github.com/Cafortinl/11911015_TDA
 cd 11911015_TDA
 make run
 ```

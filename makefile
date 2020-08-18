@@ -1,18 +1,25 @@
-all:
-	-g++ main.cpp \
-	Object.cpp \
-	Alumno.cpp \
-	Simbolo.cpp \
-	TDAList.cpp \
-	TDAStack.cpp \
-	TDAQueue.cpp \
-	ArrayList.cpp \
-	ArrayStack.cpp \
-	ArrayQueue.cpp \
-	Node.cpp \
-	LinkedList.cpp \
-	LinkedStack.cpp \
-	LinkedQueue.cpp \
-	-o tda
+CXX       := g++
+CXX_FLAGS := 
+
+BIN		:= bin
+SRC		:= src
+INCLUDE	:= include
+LIB		:= lib
+LIBRARIES	:=
+EXECUTABLE	:= main
+
+
+all: $(BIN)/$(EXECUTABLE)
+
+run: clean all
+	clear
+	@echo "Executing...\n"
+	./$(BIN)/$(EXECUTABLE)
+
+$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
+	@echo "Building...\n"
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+
 clean:
-	-rm o
+	@echo "Clearing...\n"
+	-rm $(BIN)/*

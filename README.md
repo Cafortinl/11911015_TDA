@@ -5,11 +5,12 @@
 ## Índice
 
 1. Introducción
-2. TDA's
+2. Compilación del proyecto
+3. TDA's
     - Lista
     - Pila
     - Cola
-3. Menú principal
+4. Menú principal
     - Menú TDA lista
         - Opciones de la lista
     - Menú TDA pila
@@ -21,6 +22,17 @@
 Este proyecto fue desarrollado para poder trabajar con los tipos de datos abstractos
 lista, pila y cola. Usted podrá trabajar con los tres tipos de datos en dos tipos de
 implementaciones: con arreglos y con nodos doblemente enlazados.
+
+# Compilación del proyecto
+
+![Compilación](./images/compilar.gif)
+
+Para compilar el proyecto simplemente debe escribir en la terminal: 
+
+```bash
+cd 11911015_TDA
+make run
+```
 
 # TDA's
 ## Lista

@@ -9,12 +9,12 @@ using namespace std;
 class Simbolo : public Object{
     public:
         Simbolo();
-        Simbolo(string);
+        Simbolo(char);
         ~Simbolo();
-        string getNombre();
+        char getSimbolo();
         bool equals(Object*);
         string toString();
     private:
-        string nombre;
+        char simbolo;
 };
 #endif

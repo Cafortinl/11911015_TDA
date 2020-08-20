@@ -257,10 +257,10 @@ int stackOptions(int x){
             switch(opcion){
                 case 1:{
                     cin.ignore();
-                    string nombre;
+                    char simbolo;
                     cout << "Ingrese el nombre del simbolo que desea agregar a la pila: ";
-                    getline(cin, nombre);
-                    Object* ptr = new Simbolo(nombre);
+                    cin >> simbolo;
+                    Object* ptr = new Simbolo(simbolo);
                     pila->push(ptr);
                     cout << "Simbolo agregado" << endl;
                     break;

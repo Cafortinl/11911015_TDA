@@ -3,23 +3,24 @@
 Simbolo::Simbolo(){
 }
 
-Simbolo::Simbolo(string n){
-    nombre = n;
+Simbolo::Simbolo(char simb){
+    simbolo = simb;
 }
 
 Simbolo::~Simbolo(){
 }
 
-string Simbolo::getNombre(){
-    return nombre;
+char Simbolo::getSimbolo(){
+    return simbolo;
 }
 
 bool Simbolo::equals(Object* x){
     Simbolo* temp = dynamic_cast<Simbolo*>(x);
-    return temp->getNombre() == nombre;
+    bool isEqual = temp->getSimbolo() == simbolo;
+    return isEqual;
     delete temp;
 }
 
 string Simbolo::toString(){
-    return "Simbolo: " + nombre;
+    return "Simbolo: " + simbolo;
 }

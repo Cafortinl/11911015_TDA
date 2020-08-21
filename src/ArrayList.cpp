@@ -95,7 +95,7 @@ bool ArrayList::isEmpty(){
 void ArrayList::print(){
     if(!isEmpty()){
         for(int i = 0;i < n;i++){
-            cout << to_string(i+1) + '[' + array[i]->toString() + ']' << endl;
+            cout << to_string(i+1) + ". [" + array[i]->toString() + ']' << endl;
         }
     }else
         cout << "La lista está vacía" << endl;
@@ -122,4 +122,15 @@ int ArrayList::find(Object* x){
 //Método que retorna el tamaño de la lista
 int ArrayList::size(){
     return n;
+}
+
+//Método que compara 2 objetos
+bool ArrayList::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string ArrayList::toString(){
+    print();
+    return "";
 }

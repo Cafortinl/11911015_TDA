@@ -51,7 +51,7 @@ bool ArrayStack::isEmpty(){
 void ArrayStack::print(){
     int index = 1;
     for(int i = tope -1;i >= 0;i--){
-        cout << to_string(index) + '[' + array[i]->toString() + ']' << endl;
+        cout << to_string(index) + ". [" + array[i]->toString() + ']' << endl;
         index++;
     }
 }
@@ -62,4 +62,15 @@ void ArrayStack::clear(){
         delete array[i];
     }
     tope = 0;
+}
+
+//Método que compara dos objetos
+bool ArrayStack::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string ArrayStack::toString(){
+    print();
+    return "";
 }

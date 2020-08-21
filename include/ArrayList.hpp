@@ -20,6 +20,8 @@ class ArrayList : public TDAList{
         Object* first();
         int find(Object*);
         int size();
+        bool equals(Object*);
+        string toString();
     private:
         Object** array;
         int capacity;

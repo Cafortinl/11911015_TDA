@@ -14,6 +14,8 @@ class LinkedQueue : public TDAQueue{
         Object* dequeue();
         bool isEmpty();
         void print();
+        bool equals(Object*);
+        string toString();
     private:
         Node* front;
         Node* end;

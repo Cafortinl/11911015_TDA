@@ -19,6 +19,8 @@ class LinkedList : public TDAList{
         Object* first();
         int find(Object*);
         int size();
+        bool equals(Object*);
+        string toString();
     private:
         Node* start;
         int n;

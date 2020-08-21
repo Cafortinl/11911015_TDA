@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ctype.h>
 #include "Object.hpp"
 #include "Alumno.hpp"
 #include "Simbolo.hpp"
@@ -24,6 +25,19 @@ int validInput(){
         cin.clear();
         cin.ignore();
         cout << "Este campo requiere un número entero. Ingréselo nuevamente: ";
+        cin >> input;
+    }
+    return input;
+}
+
+//Método que valida que la entrada es del tipo de dato correcto (caracter)
+char validInputChar(){
+    char input;
+    cin >> input;
+    while(!isalpha(input)){
+        cin.clear();
+        cin.ignore();
+        cout << "Este campo requiere un caracter. Ingréselo nuevamente: ";
         cin >> input;
     }
     return input;
@@ -259,7 +273,7 @@ int stackOptions(int x){
                     cin.ignore();
                     char simbolo;
                     cout << "Ingrese el nombre del simbolo que desea agregar a la pila: ";
-                    cin >> simbolo;
+                    simbolo = validInputChar();
                     Object* ptr = new Simbolo(simbolo);
                     pila->push(ptr);
                     cout << "Simbolo agregado" << endl;

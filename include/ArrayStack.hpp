@@ -14,6 +14,8 @@ class ArrayStack : public TDAStack{
         bool isEmpty();
         void print();
         void clear();
+        bool equals(Object*);
+        string toString();
     private:
         Object** array;
         int tope;

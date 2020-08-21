@@ -22,5 +22,7 @@ bool Simbolo::equals(Object* x){
 }
 
 string Simbolo::toString(){
-    return "Simbolo: " + simbolo;
+    string ret = "Simbolo: ";
+    ret += simbolo; 
+    return ret;
 }

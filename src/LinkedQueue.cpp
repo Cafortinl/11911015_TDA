@@ -77,13 +77,24 @@ void LinkedQueue::print(){
         Node* temp = front;
         int i = 1;
         while(temp->getNext()){
-            cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
+            cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
             temp = temp->getNext();
             i++;
         }
-        cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
+        cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
         temp = nullptr;
         delete temp;
     }else
         cout << "La cola está vacía" << endl;
+}
+
+//Método que compara 2 objetos
+bool LinkedQueue::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string LinkedQueue::toString(){
+    print();
+    return "";
 }

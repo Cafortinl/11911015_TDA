@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class TDAList{
+class TDAList : public Object{
     public:
         virtual bool insert(int, Object*) = 0;
         virtual Object* remove(int) = 0;
@@ -19,5 +19,7 @@ class TDAList{
         virtual int find(Object*) = 0;
         virtual ~TDAList(){};
         virtual int size() = 0;
+        virtual bool equals(Object*) = 0;
+        virtual string toString() = 0;
 };
 #endif

@@ -80,9 +80,9 @@ void ArrayQueue::print(){
     if(!isEmpty()){
         for(int i = front;i < length;i++){
             if(i < capacity)
-                cout << to_string(index) + '[' + array[i]->toString() + ']' << endl;
+                cout << to_string(index) + ". [" + array[i]->toString() + ']' << endl;
             else
-                cout << to_string(index) + '[' + array[(i + front) - length]->toString() + ']' << endl;
+                cout << to_string(index) + ". [" + array[(i + front) - length]->toString() + ']' << endl;
             index++;
         }
     }else
@@ -98,4 +98,15 @@ int ArrayQueue::calcLength(){
         length = capacity + end;
 
     return length;
+}
+
+//Método que compara dos objetos
+bool ArrayQueue::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string ArrayQueue::toString(){
+    print();
+    return "";
 }

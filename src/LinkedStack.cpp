@@ -64,7 +64,7 @@ void LinkedStack::print(){
         Node* temp = topNode;
         int i = 1;
         while(temp->getNext()){
-            cout << to_string(i) + '[' + temp->getData()->toString() + ']' << endl;
+            cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
             temp = temp->getNext();
             i++;
         }
@@ -82,4 +82,15 @@ void LinkedStack::clear(){
     }else{
         cout << "La lista ya está vacía" << endl;
     }
+}
+
+//Método que compara 2 objetos
+bool LinkedStack::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string LinkedStack::toString(){
+    print();
+    return "";
 }

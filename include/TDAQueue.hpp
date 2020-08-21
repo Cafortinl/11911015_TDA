@@ -3,7 +3,7 @@
 
 #include "Object.hpp"
 
-class TDAQueue{
+class TDAQueue : public Object{
     public:
         virtual void clear() = 0;
         virtual Object* peek() = 0;
@@ -12,5 +12,7 @@ class TDAQueue{
         virtual bool isEmpty() = 0;
         virtual void print() = 0;
         virtual ~TDAQueue(){};
+        virtual bool equals(Object*) = 0;
+        virtual string toString() = 0;
 };
 #endif

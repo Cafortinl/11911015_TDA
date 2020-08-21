@@ -107,7 +107,7 @@ void LinkedList::print(){
     if(!isEmpty()){
         Node* temp = start;
         for(int i = 0;i < n;i++){
-            cout << to_string(i + 1) + '[' + temp->getData()->toString() + ']' << endl;
+            cout << to_string(i + 1) + ". [" + temp->getData()->toString() + ']' << endl;
             if(temp->getNext())
                 temp = temp->getNext();
         }
@@ -139,4 +139,15 @@ int LinkedList::find(Object* x){
 //Método que retorna el número de elementos que hay en la lista
 int LinkedList::size(){
     return n;
+}
+
+//Método que compara 2 objetos
+bool LinkedList::equals(Object* ptr){
+    return false;
+}
+
+//Método que representa la lista
+string LinkedList::toString(){
+    print();
+    return "";
 }

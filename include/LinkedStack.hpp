@@ -14,6 +14,8 @@ class LinkedStack : public TDAStack{
         bool isEmpty();
         void print();
         void clear();
+        bool equals(Object*);
+        string toString();
     private:
         Node* topNode;
 };

@@ -3,7 +3,7 @@
 
 #include "Object.hpp"
 
-class TDAStack{
+class TDAStack : public Object{
     public:
         virtual void push(Object*) = 0;
         virtual Object* pop() = 0;
@@ -12,5 +12,7 @@ class TDAStack{
         virtual void print() = 0;
         virtual void clear() = 0;
         virtual ~TDAStack(){};
+        virtual bool equals(Object*) = 0;
+        virtual string toString() = 0;
 };
 #endif

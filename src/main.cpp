@@ -32,15 +32,13 @@ int validInput(){
 
 //Método que valida que la entrada es del tipo de dato correcto (caracter)
 char validInputChar(){
-    char input;
+    string input;
     cin >> input;
-    while(!isalpha(input)){
-        cin.clear();
-        cin.ignore();
+    while(input.length() != 1){
         cout << "Este campo requiere un caracter. Ingréselo nuevamente: ";
         cin >> input;
     }
-    return input;
+    return input[0];
 }
 
 //Método que muestra las operaciones posibles

@@ -138,7 +138,7 @@ int listOptions(int x){
                         else
                             cout << "No se pudo ingresar el alumno" << endl;
                         cout << "¿Desea ingresar otro alumno? [s/n]: ";
-                        cin >> respuesta;
+                        respuesta = validInputChar();
                     }while(respuesta != 'n' && respuesta != 'N');
                     break;
                 }

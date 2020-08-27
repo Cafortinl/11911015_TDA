@@ -50,10 +50,13 @@ bool ArrayStack::isEmpty(){
 //Método que imprime los elementos de la pila en orden de salida
 void ArrayStack::print(){
     int index = 1;
-    for(int i = tope -1;i >= 0;i--){
-        cout << index << ". [" << array[i]->toString() << ']' << endl;
-        index++;
-    }
+    if(!isEmpty()){
+        for(int i = tope -1;i >= 0;i--){
+            cout << index << ". [" << array[i]->toString() << ']' << endl;
+            index++;
+        }
+    }else
+        cout << "La pila está vacía" << endl;
 }
 
 //Método que vacía la lista

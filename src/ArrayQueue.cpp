@@ -86,7 +86,7 @@ void ArrayQueue::print(){
             index++;
         }
     }else
-        cout << "La lista está vacía" << endl;
+        cout << "La cola está vacía" << endl;
 }
 
 //Método que calcula la distancia entre el frente y el final de la cola

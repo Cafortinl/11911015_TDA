@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <ctype.h>
 #include "Object.hpp"
 #include "Alumno.hpp"
 #include "Simbolo.hpp"

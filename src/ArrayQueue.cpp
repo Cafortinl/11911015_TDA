@@ -80,9 +80,9 @@ void ArrayQueue::print(){
     if(!isEmpty()){
         for(int i = front;i < length;i++){
             if(i < capacity)
-                cout << to_string(index) + ". [" + array[i]->toString() + ']' << endl;
+                cout << index << ". [" << array[i]->toString() << ']' << endl;
             else
-                cout << to_string(index) + ". [" + array[(i + front) - length]->toString() + ']' << endl;
+                cout << index << ". [" << array[(i + front) - length]->toString() << ']' << endl;
             index++;
         }
     }else

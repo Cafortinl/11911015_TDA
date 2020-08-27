@@ -1,5 +1,4 @@
 #include "Alumno.hpp"
-#include <string>
 
 using namespace std;
 

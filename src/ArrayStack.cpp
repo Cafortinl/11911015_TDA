@@ -51,7 +51,7 @@ bool ArrayStack::isEmpty(){
 void ArrayStack::print(){
     int index = 1;
     for(int i = tope -1;i >= 0;i--){
-        cout << to_string(index) + ". [" + array[i]->toString() + ']' << endl;
+        cout << index << ". [" << array[i]->toString() << ']' << endl;
         index++;
     }
 }

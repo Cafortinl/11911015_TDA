@@ -107,7 +107,7 @@ void LinkedList::print(){
     if(!isEmpty()){
         Node* temp = start;
         for(int i = 0;i < n;i++){
-            cout << to_string(i + 1) + ". [" + temp->getData()->toString() + ']' << endl;
+            cout << i + 1 << ". [" << temp->getData()->toString() << ']' << endl;
             if(temp->getNext())
                 temp = temp->getNext();
         }

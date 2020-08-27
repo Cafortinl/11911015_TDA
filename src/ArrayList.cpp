@@ -14,7 +14,6 @@ ArrayList::~ArrayList(){
         delete array[i];
     }
     delete[] array;
-    cout << "deleted list" << endl;
 }
 
 //Método que inserta el objeto x en la posición p si la posición es válida
@@ -95,7 +94,7 @@ bool ArrayList::isEmpty(){
 void ArrayList::print(){
     if(!isEmpty()){
         for(int i = 0;i < n;i++){
-            cout << to_string(i+1) + ". [" + array[i]->toString() + ']' << endl;
+            cout << i+1 << ". [" << array[i]->toString() << ']' << endl;
         }
     }else
         cout << "La lista está vacía" << endl;

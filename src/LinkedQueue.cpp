@@ -76,12 +76,11 @@ void LinkedQueue::print(){
     if(!isEmpty()){
         Node* temp = front;
         int i = 1;
-        while(temp->getNext()){
-            cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
+        while(temp){
+            cout << i << ". [" << temp->getData()->toString() << ']' << endl;
             temp = temp->getNext();
             i++;
         }
-        cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
         temp = nullptr;
         delete temp;
     }else

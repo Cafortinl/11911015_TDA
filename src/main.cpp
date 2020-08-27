@@ -139,6 +139,7 @@ int listOptions(int x){
                             cout << "No se pudo ingresar el alumno" << endl;
                         cout << "¿Desea ingresar otro alumno? [s/n]: ";
                         respuesta = validInputChar();
+                        cout<<endl;
                     }while(respuesta != 'n' && respuesta != 'N');
                     break;
                 }
@@ -154,7 +155,7 @@ int listOptions(int x){
                     cin >> cuenta;
                     Object* ptr = new Alumno("", cuenta);
                     if(lista->find(ptr) > 0)
-                        cout << to_string(lista->find(ptr)) + '[' + lista->get(lista->find(ptr))->toString() + ']' << endl;
+                        cout << "El elemento en la posición " << lista->find(ptr)  << " es: [" << lista->get(lista->find(ptr))->toString() << ']' << endl;
                     else
                         cout << "El alumno que busca no está en la lista" << endl;
                     break;
@@ -166,7 +167,7 @@ int listOptions(int x){
                     posicion = validInput();
                     Object* ptr = lista->remove(posicion);
                     if(ptr)
-                        cout << "El alumno [" + ptr->toString() + "] fue borrado exitosamente" << endl;
+                        cout << "El alumno [" << ptr->toString() << "] fue borrado exitosamente" << endl;
                     else
                         cout << "No se pudo eliminar el elemento seleccionado" << endl;
                     delete ptr;
@@ -177,7 +178,7 @@ int listOptions(int x){
                     if(lista->isEmpty())
                         cout << "La lista está vacía" << endl;
                     else
-                        cout << "La lista no está vacía, tiene " + to_string(lista->size()) + " elementos" << endl;
+                        cout << "La lista no está vacía, tiene " << lista->size() << " elementos" << endl;
                     break;
                 }
 
@@ -186,7 +187,7 @@ int listOptions(int x){
                     cout << "Ingrese la posición de la que desea recuperar el elemento: ";
                     posicion = validInput();
                     if(lista->get(posicion) != nullptr)
-                        cout << "El elemento en la posición " + to_string(posicion) + " es: " + lista->get(posicion)->toString() << endl;
+                        cout << "El elemento en la posición " << posicion << " es: " << lista->get(posicion)->toString() << endl;
                     else
                         cout << "No existe el elemento que busca" << endl;
                     break;
@@ -197,7 +198,7 @@ int listOptions(int x){
                     cout << "Ingrese la posición de la que desea recuperar el elemento siguiente: ";
                     posicion = validInput();
                     if(lista->getNext(posicion) != nullptr)
-                        cout << "El elemento que le sigue a la posición " + to_string(posicion) + " es: " + lista->getNext(posicion)->toString() << endl;
+                        cout << "El elemento que le sigue a la posición " << posicion << " es: " << lista->getNext(posicion)->toString() << endl;
                     else
                         cout << "No existe el elemento que busca" << endl;
                     break;
@@ -208,7 +209,7 @@ int listOptions(int x){
                     cout << "Ingrese la posición de la que desea recuperar el elemento anterior: ";
                     posicion = validInput();
                     if(lista->getPrevious(posicion) != nullptr)
-                        cout << "El elemento antes de la posición " + to_string(posicion) + " es: " + lista->getPrevious(posicion)->toString() << endl;
+                        cout << "El elemento antes de la posición " << posicion << " es: " << lista->getPrevious(posicion)->toString() << endl;
                     else
                         cout << "No existe el elemento que busca" << endl;
                     break;
@@ -281,7 +282,7 @@ int stackOptions(int x){
                 case 2:{
                     Object* ptr = pila->pop();
                     if(ptr)
-                        cout << "El elemento sacado es: " + ptr->toString() << endl;
+                        cout << "El elemento sacado es: " << ptr->toString() << endl;
                     else
                         cout << "La pila está vacía" << endl;
                     delete ptr;
@@ -291,7 +292,7 @@ int stackOptions(int x){
                 case 3:{
                     Object* ptr = pila->top();
                     if(ptr)
-                        cout << "El elemento en el tope de la pila es: " + ptr->toString() << endl;
+                        cout << "El elemento en el tope de la pila es: " << ptr->toString() << endl;
                     else
                         cout << "La pila está vacía" << endl;
                     break;
@@ -373,7 +374,7 @@ int queueOptions(int x){
                 case 2:{
                     Object* ptr = cola->dequeue();
                     if(ptr)
-                        cout << "El elemento que se sacó de la cola es: " + ptr->toString() << endl;
+                        cout << "El elemento que se sacó de la cola es: [" << ptr->toString() << ']' << endl;
                     else
                         cout << "La cola está vacía" << endl;
                     delete ptr;
@@ -383,7 +384,7 @@ int queueOptions(int x){
                 case 3:{
                     Object* ptr = cola->peek();
                     if(ptr)
-                        cout << "El elemento está al frente de la cola es: " + ptr->toString() << endl;
+                        cout << "El elemento está al frente de la cola es: [" << ptr->toString() << ']' << endl;
                     else
                         cout << "La cola está vacía" << endl;
                     break;

@@ -64,7 +64,7 @@ void LinkedStack::print(){
         Node* temp = topNode;
         int i = 1;
         while(temp->getNext()){
-            cout << to_string(i) + ". [" + temp->getData()->toString() + ']' << endl;
+            cout << i << ". [" << temp->getData()->toString() << ']' << endl;
             temp = temp->getNext();
             i++;
         }

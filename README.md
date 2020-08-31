@@ -69,6 +69,8 @@ La tercera opción nos regresará al menú principal.
 ![Opciones de la lista](./images/opcionesLista.png)
 
 1. Insertar elemento
+
+    ![Ejemplo insertar elemento](./images/ejemploLista.gif)
     
     Se le pedirá al usuario que ingrese el nombre y el número de cuenta del alumno que ingresará y después la posición en la que desea ingresarlo. Una vez hecho esto se le notificará si se pudo ingresar exitósamente el elemento o no y se le preguntará si desea ingresar otro elemento. Si selecciona no ('n') se le regresará al menú de opciones de la lista.
 
@@ -122,7 +124,9 @@ La tercera opción nos regresará al menú principal.
 
 1. Empujar
 
-    Se le pedirá al usuario que ingrese un símbolo para "empujar" a la pila.
+    ![Ejemplo empujar](./images/ejemploPila.gif)
+
+    Se le pedirá al usuario que ingrese un símbolo (caracter) para "empujar" a la pila.
 
 2. Sacar
 
@@ -157,6 +161,8 @@ La tercera opción nos regresará al menú principal.
 ![Opciones de la cola](./images/opcionesCola.png)
 
 1. Encolar
+
+    ![Ejemplo encolar](./images/ejemploCola.gif)
 
     Se le pide al usuario que ingrese el nombre y el número de cuenta del alumno que desea poner en la cola.
 
